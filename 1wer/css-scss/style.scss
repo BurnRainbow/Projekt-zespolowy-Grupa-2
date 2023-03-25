@@ -1,0 +1,100 @@
+$grey: #4d4d4c;
+$yellow: #efc371;
+$purple: #ae94c0;
+$green: #b5bc67;
+$orange: #dd925f;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    font-weight: 400;
+    list-style-type: none;
+    font-style: normal;
+}
+
+body {
+    background: linear-gradient(to right, #c04848, #480048);
+    height: 100vh;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+nav {
+    line-height: 1.4;
+    font-family: "Space Mono", monospace;
+    background: #1d1f20;
+    padding: 25px 35px;
+    width: 300px;
+    top: calc(50vh - 247px);
+    left: calc(50vw - 150px);
+    position: fixed;
+    border-radius: 16px;
+    box-shadow: 0 0 60px -15px black;
+    transform: scale(0) rotate(360deg);
+    transition: all 0.75s;
+    font-size: 18px
+}
+
+nav.menu_active {
+    transform: scale(1) rotate(0deg);
+}
+
+nav > ol > li {
+    margin: 20px 0;
+    color: $green;
+}
+
+nav > ol > li:first-of-type {
+    color: $yellow;
+}
+
+nav > ol > li > ol {
+    margin: 10px 0 0 20px;
+    border-left: 1px solid $grey;
+    color: $purple;
+}
+
+nav > ol > li > ol > li {
+    margin: 7px 0;
+    padding-left: 20px;
+}
+
+nav a:hover {
+    color: $orange;
+}
+
+h3 {
+    position: fixed;
+    font-family: "Roboto Mono", monospace;
+    font-size: 60px;
+    color: #cfd8dc;
+    top: calc(50vh - 40px);
+    left: calc(50vw - 126px);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+h3:hover {
+    border-bottom: 6px dotted #cfd8dc;
+    padding-bottom: 10px;
+    top: calc(50vh - 50px);
+}
+ 
+p {
+    font-family: "Roboto Mono", monospace;
+    float: right;
+    cursor: pointer;
+    font-size: 16px;
+    color: #cfd8dc;
+    transition: all 0.2s;
+}
+
+p:hover {
+    border-bottom: 2px dotted #cfd8dc;
+    padding-bottom: 5px
+}
