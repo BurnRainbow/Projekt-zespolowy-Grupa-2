@@ -1,5 +1,5 @@
 :root {
-  --white:#f1f1f1 ;
+  --white: #f1f1f1;
 }
 
 body {
@@ -18,16 +18,18 @@ body {
   background-repeat: no-repeat;
 }
 
-div > span {
+div>span {
   opacity: 0.15;
 }
 
-#G, #D {
+#G,
+#D {
   opacity: 1;
   animation: flickerI 7s linear reverse infinite;
 }
 
-#G::after, #D::after {
+#G::after,
+#D::after {
   content: "";
   width: 150%;
   box-shadow: -35px 0px 60px 8px rgb(255, 255, 255);
@@ -56,11 +58,13 @@ div > span {
   filter: blur(10px);
 }
 
-#R, #A {
+#R,
+#A {
   animation: flickerH 2s linear reverse infinite;
 }
 
-#P, #U {
+#P,
+#U {
   animation: flickerH 3.5s linear reverse infinite;
 }
 
@@ -68,90 +72,118 @@ div > span {
   0% {
     opacity: 0.4;
   }
+
   5% {
     opacity: 0.5;
   }
+
   10% {
     opacity: 0.6;
   }
+
   15% {
     opacity: 0.85;
   }
+
   25% {
     opacity: 0.5;
   }
+
   30% {
     opacity: 1;
   }
+
   35% {
     opacity: 0.1;
   }
+
   40% {
     opacity: 0.25;
   }
+
   45% {
     opacity: 0.5;
   }
+
   60% {
     opacity: 1;
   }
+
   70% {
     opacity: 0.85;
   }
+
   80% {
     opacity: 0.4;
   }
+
   90% {
     opacity: 0.5;
   }
+
   100% {
     opacity: 1;
   }
 }
+
 @keyframes flickerH {
   0% {
     opacity: 0.15;
   }
+
   5% {
     opacity: 0.2;
   }
+
   10% {
     opacity: 0.12;
   }
+
   15% {
     opacity: 0.2;
   }
+
   25% {
     opacity: 0.15;
   }
+
   30% {
     opacity: 0.4;
   }
+
   35% {
     opacity: 0.05;
   }
+
   40% {
     opacity: 0.12;
   }
+
   45% {
     opacity: 0.15;
   }
+
   60% {
     opacity: 0.3;
   }
+
   70% {
     opacity: 0.2;
   }
+
   80% {
     opacity: 0.3;
   }
+
   90% {
     opacity: 0.18;
   }
+
   100% {
     opacity: 0.3;
   }
 }
+
 .wrapper {
   position: fixed;
   top: 0;
@@ -160,13 +192,13 @@ div > span {
   width: 100%;
   background: #0a0a0a;
   -webkit-clip-path: circle(25px at calc(100% - 45px) 45px);
-          clip-path: circle(25px at calc(100% - 45px) 45px);
+  clip-path: circle(25px at calc(100% - 45px) 45px);
   transition: all 0.5s ease-in-out;
 }
 
-#active:checked ~ .wrapper {
+#active:checked~.wrapper {
   -webkit-clip-path: circle(75%);
-          clip-path: circle(75%);
+  clip-path: circle(75%);
 }
 
 .menu-btn {
@@ -187,12 +219,12 @@ div > span {
   transition: all 0.5s ease-in-out;
 }
 
-#active:checked ~ .menu-btn {
+#active:checked~.menu-btn {
   color: #fff;
   background: #0a0a0a;
 }
 
-#active:checked ~ .menu-btn i:before {
+#active:checked~.menu-btn i:before {
   content: "\f00d";
 }
 
@@ -255,7 +287,10 @@ input[type=checkbox] {
   0% {
     filter: hue-rotate(0deg);
   }
+
   100% {
     filter: hue-rotate(360deg);
   }
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */
