@@ -6,13 +6,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class StronaGlownaController extends AbstractController
+class ONasController extends AbstractController
 {
-    #[Route('/', name: 'app_strona_glowna')]
+    #[Route('/o-nas', name: 'app_o_nas')]
     public function index(): Response
     {
-        return $this->render('strona_glowna/index.html.twig', [
-            'controller_name' => 'StronaGlownaController',
+        return $this->render('o_nas/index.html.twig', [
+            'controller_name' => 'ONasController',
         ]);
     }
 }

@@ -1,0 +1,265 @@
+:root {
+  --white: #f1f1f1 ;
+}
+
+body {
+  margin: 0;
+  font-family: Montserrat;
+  font-size: 40px;
+  color: var(--white);
+  letter-spacing: 0.7em;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("https://wallpapers.com/images/hd/casino-background-67ppr1q6d49pwpaz.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+div > span {
+  opacity: 0.15;
+}
+
+#G,
+#D {
+  opacity: 1;
+  animation: flickerI 7s linear reverse infinite;
+}
+
+#G::after,
+#D::after {
+  content: "";
+  width: 150%;
+  box-shadow: -35px 0px 60px 8px rgb(255, 255, 255);
+}
+
+#S::before,
+#S::after {
+  content: " ";
+  width: 100px;
+  height: 100px;
+  background: var(--white);
+  position: absolute;
+  top: -50%;
+  left: 100%;
+  border-radius: 100%;
+  opacity: 0.05;
+  filter: blur(15px);
+}
+
+#U::after {
+  width: 200px;
+  height: 200px;
+  top: -150%;
+  left: -5%;
+  opacity: 0.1;
+  filter: blur(10px);
+}
+
+#R,
+#A {
+  animation: flickerH 2s linear reverse infinite;
+}
+
+#P,
+#U {
+  animation: flickerH 3.5s linear reverse infinite;
+}
+
+@keyframes flickerI {
+  0% {
+    opacity: 0.4;
+  }
+  5% {
+    opacity: 0.5;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  15% {
+    opacity: 0.85;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  30% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0.1;
+  }
+  40% {
+    opacity: 0.25;
+  }
+  45% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.85;
+  }
+  80% {
+    opacity: 0.4;
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes flickerH {
+  0% {
+    opacity: 0.15;
+  }
+  5% {
+    opacity: 0.2;
+  }
+  10% {
+    opacity: 0.12;
+  }
+  15% {
+    opacity: 0.2;
+  }
+  25% {
+    opacity: 0.15;
+  }
+  30% {
+    opacity: 0.4;
+  }
+  35% {
+    opacity: 0.05;
+  }
+  40% {
+    opacity: 0.12;
+  }
+  45% {
+    opacity: 0.15;
+  }
+  60% {
+    opacity: 0.3;
+  }
+  70% {
+    opacity: 0.2;
+  }
+  80% {
+    opacity: 0.3;
+  }
+  90% {
+    opacity: 0.18;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #0a0a0a;
+  -webkit-clip-path: circle(20px at calc(100% - 45px) 45px);
+          clip-path: circle(20px at calc(100% - 45px) 45px);
+  transition: all 0.5s ease-in-out;
+}
+
+#active:checked ~ .wrapper {
+  -webkit-clip-path: circle(75%);
+          clip-path: circle(75%);
+}
+
+.menu-btn {
+  position: absolute;
+  z-index: 2;
+  right: 20px;
+  top: 20px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  background: #000000;
+  transition: all 0.5s ease-in-out;
+}
+
+#active:checked ~ .menu-btn {
+  color: #fff;
+  background: #0a0a0a;
+  position:fixed;
+}
+
+#active:checked ~ .menu-btn i:before {
+  content: "\f00d";
+}
+
+.wrapper ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+}
+
+.wrapper ul li {
+  margin: 15px 0;
+}
+
+.wrapper ul li a {
+  color: none;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 5px 30px;
+  color: #fff;
+  border-radius: 50px;
+  background: #0a0a0a;
+  position: relative;
+  line-height: 50px;
+  transition: all 0.3s ease;
+}
+
+.wrapper ul li a:after {
+  position: absolute;
+  content: "";
+  background: #fff;
+  background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+  width: 104%;
+  height: 110%;
+  left: -2%;
+  top: -5%;
+  border-radius: 50px;
+  transform: scaleY(0);
+  z-index: -1;
+  animation: rotate 1.5s linear infinite;
+  transition: transform 0.3s ease;
+}
+
+.wrapper ul li a:hover:after {
+  transform: scaleY(1);
+}
+
+.wrapper ul li a:hover {
+  color: #fff;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+@keyframes rotate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}/*# sourceMappingURL=main.css.map */
