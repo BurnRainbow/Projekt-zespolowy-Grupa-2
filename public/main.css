@@ -186,14 +186,13 @@ div > span {
   font-size: 20px;
   color: #fff;
   cursor: pointer;
-  background: #000000;
+  background: #000;
   transition: all 0.5s ease-in-out;
 }
 
 #active:checked ~ .menu-btn {
   color: #fff;
   background: #0a0a0a;
-  position:fixed;
 }
 
 #active:checked ~ .menu-btn i:before {
