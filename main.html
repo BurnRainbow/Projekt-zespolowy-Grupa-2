@@ -1,0 +1,60 @@
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div class="main">
+                    <span id="ZakonczenieGry"></span>
+                <div>
+                    <div>
+                        <h2> Gracz: <span id="WynikGracza">0</span></h2>
+                    </div>
+                    <div>
+                        <h2> Rozdający: <span id="WynikSi">0</span></h2>
+                    </div>
+                </div>
+
+                    <div>
+                        <button id="Dobierz"> Dobierz </button> 
+                        <button id="Zostan"> Zostan </button>
+                        <button id="Rozdaj"> Rozdaj </button>
+                    </div>
+
+                <div>
+                    <h3> Tablica wyników: </h3>
+                    <table>
+                        <tr>
+                            <th> Wygrane </th>
+                            <th> Przegrane </th>
+                            <th> Remisy </th>
+                        </tr>
+                        <tr>
+                            <td><span id="Wygrana">0</span></td>
+                            <td><span id="Przegrana">0</span></td>
+                            <td><span id="Remis">0</span></td>
+                        </tr>
+                    </table>
+                </div>
+        </div>
+
+        <script src="JavaScript.js"></script>
+
+
+
+        
+<!-- (A) LIST USERS HERE -->
+<div id="demo"></div>
+
+<!-- (B) FETCH USERS VIA AJAX -->
+<script>
+// NOTE: RUN WITH HTTP://, NOT FILE://
+window.addEventListener("load", () => {
+  fetch("1b-database.php", { method: "POST" })
+  .then(res => res.text())
+  .then(txt => document.getElementById("demo").innerHTML = txt);
+});
+</script>
+       
+    </body>
+</html>
