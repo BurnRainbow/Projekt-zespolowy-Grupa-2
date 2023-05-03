@@ -12,9 +12,7 @@ use Symfony\Component\Form\Forms;
 use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\TextareaType;
-use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
-use Symfony\Component\Form\Extension\Core\Type\HiddenType;
+use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 
 use App\Entity\User;
 
@@ -29,7 +27,7 @@ class UserController extends AbstractController
                 'label' => 'Nazwa użytkownika:',
                 'required' => true
         ])
-            ->add('password', TextType::class, [
+            ->add('password', PasswordType::class, [
                 'label' => 'Hasło:',
                 'required' => true
         ])
@@ -45,7 +43,7 @@ class UserController extends AbstractController
 
             return $this->redirectToRoute('main_game');
         }
-        return $this->render('register/index.html.twig', [
+        return $this->render('login/index.html.twig', [
             'form' => $form->createView()
         ]);
     }
