@@ -1,20 +1,41 @@
 {% extends 'base.html.twig' %}
-
-{% block title %}Hello MainGameController!{% endblock %}
-
+{% block head %}
+{% block title %}Giera{% endblock %}
+<script type="text/javascript" src="{{ asset('/js/game.js') }}"></script>
+{% endblock %}
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+        <div class="main">
+                    <span id="ZakonczenieGry"></span>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+                <div>
+                    <div>
+                        <h2> Gracz: <span id="WynikGracza">0</span></h2>
+                    </div>
+                    <div>
+                        <h2> Rozdający: <span id="WynikSi">0</span></h2>
+                    </div>
+                </div>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'E:/symfony/src/Controller/MainGameController.php'|file_link(0) }}">src/Controller/MainGameController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'E:/symfony/templates/main_game/index.html.twig'|file_link(0) }}">templates/main_game/index.html.twig</a></code></li>
-    </ul>
-</div>
+                    <div>
+                        <button onclick="Dobierz()"> Dobierz</button> 
+                        <button onclick="Zostan()"> Zostan </button>
+                        <button onclick="Rozdaj()"> Rozdaj </button>
+                    </div>
+
+                <div>
+                    <h3> Tablica wyników: </h3>
+                    <table>
+                        <tr>
+                            <th> Wygrane </th>
+                            <th> Przegrane </th>
+                            <th> Remisy </th>
+                        </tr>
+                        <tr>
+                            <td><span id="Wygrana">0</span></td>
+                            <td><span id="Przegrana">0</span></td>
+                            <td><span id="Remis">0</span></td>
+                        </tr>
+                    </table>
+                </div>
+        </div>
 {% endblock %}
