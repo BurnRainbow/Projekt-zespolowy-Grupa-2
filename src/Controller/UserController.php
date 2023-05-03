@@ -24,11 +24,11 @@ class UserController extends AbstractController
         $user = new User(); 
         $form = $this->createFormBuilder($user)
             ->add('username', TextType::class, [
-                'label' => 'Nazwa użytkownika:',
+                'label' => 'Nazwa użytkownika: ',
                 'required' => true
         ])
             ->add('password', PasswordType::class, [
-                'label' => 'Hasło:',
+                'label' => 'Hasło: ',
                 'required' => true
         ])
         ->add('save', SubmitType::class, [

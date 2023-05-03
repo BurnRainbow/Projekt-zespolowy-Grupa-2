@@ -157,6 +157,3 @@ function Rozdaj(){
 
     }
 }
-function showAlert(){
-    alert("Hello!");
-}
