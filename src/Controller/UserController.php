@@ -18,7 +18,7 @@ use App\Entity\User;
 
 class UserController extends AbstractController
 {
-    #[Route('/login', name: 'user_login')]
+    #[Route('/logintest', name: 'user_login')]
     public function index(Request $request): Response
     {
         $user = new User(); 
