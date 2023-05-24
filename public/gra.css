@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    
+    background-color: #1a1a1a;
+    background-image: url("tlo.png");
+    background-repeat: repeat;
+    background-position: center center;
+  }
+  header {
+    background-color: #33CC99;
+    padding: 25px;
+    text-align: center;
+  }
+
+    h1 {
+    color: #FFFFFF;
+    font-size: 36px;
+    margin: 0;
+    color:#FF0066;
+    }
+  
+
+  .main {
+    margin: 50px auto;
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  h2, h3 {
+    margin-bottom: 10px;
+  }
+  
+  button {
+    margin: 10px 5px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+
+  table {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table th, table td {
+    padding: 5px;
+    border: 1px solid #fff;
+  }
+  
+  #ZakonczenieGry {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  #WynikGracza, #WynikSi {
+    font-size: 18px;
+  }
+  
+  #Wygrana, #Przegrana, #Remis {
+    font-weight: bold;
+  }
+  
+ 
+  ul.bazadanych {
+    list-style-type: none;
+    margin-top: 20px;
+  }
+  
+  ul.bazadanych li {
+    margin-bottom: 5px;
+  }
+  .admin-panel {
+    position: relative;
+    z-index: 2;
+  }
+
+  .d1{
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 0;
+    padding: 50;
+    height: 200;
+    text-align: center;
+    
+  }
+  
+  .c {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+.zakoncz{
+    text-align: center;
+    background-color: white;
+    margin: 50;
+}
+  

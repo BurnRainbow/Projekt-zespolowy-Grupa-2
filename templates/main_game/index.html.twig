@@ -2,20 +2,26 @@
 {% block head %}
 {% block title %}Giera{% endblock %}
 <script type="text/javascript" src="{{ asset('/js/game.js') }}"></script>
+<link href="{{ asset('/gra.css') }}" rel="stylesheet"/> 
 {% endblock %}
 {% block body %}
-        <div class="main">
-                    <span id="ZakonczenieGry"></span>
+        <header>
+            <h1>Black Jack</h1>
+        </header>
+        
 
-                <div>
-                    <div>
+                <div class="zakoncz">        
+                    <span id="ZakonczenieGry"></span>
+                </div>
+                <div id="c"> 
+                    <div class="d1">
                         <h2> Gracz: <span id="WynikGracza">0</span></h2>
-                    </div>
-                    <div>
+                    </div><div class="d1">
                         <h2> Rozdający: <span id="WynikSi">0</span></h2>
                     </div>
                 </div>
-
+                
+                    <div class="main">
                     <div>
                         <button onclick="Dobierz()"> Dobierz</button> 
                         <button onclick="Zostan()"> Zostan </button>
