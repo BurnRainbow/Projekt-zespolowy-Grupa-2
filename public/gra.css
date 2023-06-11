@@ -1,23 +1,21 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-
-  background-color: #1a1a1a;
-  background-image: url("tlo.png");
-  background-repeat: repeat;
-  background-position: center center;
-}
-.BlackJack {
-  background-color: #33CC99;
-  padding: 25px;
-  text-align: center;
-  width:100%;
-}
-
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    
+    background-color: #1a1a1a;
+    background-image: url("tlo.png");
+    background-repeat: repeat;
+    background-position: center center;
+  }
+  header {
+    background-color: #33CC99;
+    padding: 25px;
+    text-align: center;
+  }
 
     h1 {
     color: #FFFFFF;
@@ -25,18 +23,18 @@ body {
     margin: 0;
     color:#FF0066;
     }
-
+  
 
   .main {
     margin: 50px auto;
     max-width: 600px;
     text-align: center;
   }
-
+  
   h2, h3 {
     margin-bottom: 10px;
   }
-
+  
   button {
     margin: 10px 5px;
     padding: 10px 20px;
@@ -46,48 +44,38 @@ body {
     border-radius: 5px;
     cursor: pointer;
   }
-
+  
 
   table {
     margin-top: 20px;
     width: 100%;
     border-collapse: collapse;
   }
-
+  
   table th, table td {
     padding: 5px;
     border: 1px solid #fff;
   }
-
+  
   #ZakonczenieGry {
     font-size: 24px;
     font-weight: bold;
   }
-
+  
   #WynikGracza, #WynikSi {
     font-size: 18px;
-    height:22rem;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
   }
-
-  .KartyGracz img, .KartySi img{
-    height: 12rem;
-    width: 8rem;
-    padding: 0.5rem;
-  }
-
+  
   #Wygrana, #Przegrana, #Remis {
     font-weight: bold;
   }
-
+  
  
   ul.bazadanych {
     list-style-type: none;
     margin-top: 20px;
   }
-
+  
   ul.bazadanych li {
     margin-bottom: 5px;
   }
@@ -96,19 +84,17 @@ body {
     z-index: 2;
   }
 
-  .Gracz, .Si{
+  .d1{
     width: 100%;
-    min-height: 16rem;
-    height: auto;
     padding: 20px;
     border: 1px solid #ccc;
     margin: 0;
     padding: 50;
     height: 200;
     text-align: center;
-
+    
   }
-
+  
   .c {
     display: flex;
     flex-wrap: wrap;
@@ -120,5 +106,5 @@ body {
     text-align: center;
     background-color: white;
     margin: 50;
-} 
+}
   
