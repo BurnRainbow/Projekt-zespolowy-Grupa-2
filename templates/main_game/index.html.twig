@@ -5,22 +5,26 @@
 <link href="{{ asset('/gra.css') }}" rel="stylesheet"/> 
 {% endblock %}
 {% block body %}
-        <header>
+        <div class="BlackJack">
             <h1>Black Jack</h1>
-        </header>
-        
-
-                <div class="zakoncz">        
+        </div>
+                <div class="zakoncz">
                     <span id="ZakonczenieGry"></span>
                 </div>
-                <div id="c"> 
-                    <div class="d1">
+                <div id="box"> 
+                    <div class="Gracz">
                         <h2> Gracz: <span id="WynikGracza">0</span></h2>
-                    </div><div class="d1">
+
+                        <div class="KartyGracz" id="KartyGracz">   </div>
+                    </div>
+
+                        <div class="Si">
                         <h2> Rozdający: <span id="WynikSi">0</span></h2>
+
+                        <div class="KartySi" id="KartySi">  </div>
                     </div>
                 </div>
-                
+
                     <div class="main">
                     <div>
                         <button onclick="Dobierz()"> Dobierz</button> 
@@ -44,13 +48,10 @@
                     </table>
                 </div>
         </div>
-    
+        <div>
 {% for x in bazadanych %}
     {{x.id}},{{x.username}}<br>
 {% endfor %}
-
-
-
-
+        </div>
 
 {% endblock %}
