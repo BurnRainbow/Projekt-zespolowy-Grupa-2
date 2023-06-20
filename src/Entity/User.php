@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
@@ -43,6 +45,23 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     #[ORM\Column]
     private ?string $password = null;
+
+    #[ORM\Column]
+    private ?int $wygrane = null;
+
+    #[ORM\Column]
+    private ?int $przegrane = null;
+
+    #[ORM\Column]
+    private ?int $remisy = null;
+
+    #[ORM\OneToMany(mappedBy: 'User', targetEntity: HistoriaGier::class)]
+    private Collection $DoHistoriiGier;
+
+    public function __construct()
+    {
+        $this->DoHistoriiGier = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -126,5 +145,71 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
+    }
+
+    public function getWygrane(): ?int
+    {
+        return $this->wygrane;
+    }
+
+    public function setWygrane(int $wygrane): static
+    {
+        $this->wygrane = $wygrane;
+
+        return $this;
+    }
+
+    public function getPrzegrane(): ?int
+    {
+        return $this->przegrane;
+    }
+
+    public function setPrzegrane(int $przegrane): static
+    {
+        $this->przegrane = $przegrane;
+
+        return $this;
+    }
+
+    public function getRemisy(): ?int
+    {
+        return $this->remisy;
+    }
+
+    public function setRemisy(int $remisy): static
+    {
+        $this->remisy = $remisy;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, HistoriaGier>
+     */
+    public function getDoHistoriiGier(): Collection
+    {
+        return $this->DoHistoriiGier;
+    }
+
+    public function addDoHistoriiGier(HistoriaGier $doHistoriiGier): static
+    {
+        if (!$this->DoHistoriiGier->contains($doHistoriiGier)) {
+            $this->DoHistoriiGier->add($doHistoriiGier);
+            $doHistoriiGier->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeDoHistoriiGier(HistoriaGier $doHistoriiGier): static
+    {
+        if ($this->DoHistoriiGier->removeElement($doHistoriiGier)) {
+            // set the owning side to null (unless already changed)
+            if ($doHistoriiGier->getUser() === $this) {
+                $doHistoriiGier->setUser(null);
+            }
+        }
+
+        return $this;
     }
 }
