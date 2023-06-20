@@ -7,7 +7,7 @@
     <title>{% block title %}Strona glowna{% endblock %}</title>
 {% endblock %}
         {% block stylesheets %}
-            <link href="main.css" rel="stylesheet"/> 
+            <link href="{{asset('/main.css') }}" rel="stylesheet"/> 
             <script src="https://kit.fontawesome.com/44cff32433.js" crossorigin="anonymous"></script>
         {% endblock %}
         {% block javascripts %}
@@ -30,10 +30,10 @@
         {% if not app.user %}
             <li><a href="{{ path('app_login')}}">Logowanie</a></li>
         {% endif %}
-            <li><a href="{{ path('main_game')}}">Gra</a></li>
             <li><a href="{{ path('app_o_nas')}}">O nas</a></li>
             <li><a href="/#">Kontakt</a></li>
         {% if app.user %}
+            <li><a href="{{ path('main_game')}}">Gra</a></li>
             <li><a href="{{ path('app_logout')}}">Wyloguj</a></li>
         {% endif %}
         </ul>

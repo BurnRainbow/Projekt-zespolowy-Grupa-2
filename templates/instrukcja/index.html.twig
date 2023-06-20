@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Instrukcja gry{% endblock %}
+
+{% block body %}
+<h1>Instrukcja gry w BlackJacka w naszym serwisie.</h1><br>
+<ol type="1">
+	<li>Przygotowanie gry:<br>
+		<ol type="a">
+			<li>W grze bierze udział 2 graczy - człowiek i komputer</li>
+			<li>Tasowanie talii kart.</li>
+		</ol>
+	</li>
+	<li>Wartość kart:<br>
+		<ol type="a">
+			<li>Karty od 2 do 10 mają wartość równą swojemu numerowi.</li>
+			<li>Walet, dama i król mają wartość 10.</li>
+			<li>As ma wartość 1 lub 11, w zależności od korzyści dla gracza.</li>
+		</ol>
+	</li>
+	<li>Cel gry:<br>
+		<ol type="a">
+			<li>Zbliżenie się do sumy 21 punktów, ale nie przekroczenie tej liczby.</li>
+			<li>Pokonanie przeciwnika, czyli uzyskanie wyższej sumy punktów niż on, ale nie przekraczając 21 punktów.</li>
+		</ol>
+	</li>
+	<li>Gra:<br>
+		<ol type="a">
+			<li>Gracz podejmuje decyzję, czy chce dobierać karty (Dobierz) lub pasować (Zostań), aż do momentu uzyskania sumy punktów bliskiej 21 lub przekroczenia tej liczby.</li>
+			<li>Po każdej rundzie gracz musi kliknąć przycisk "Rozdaj".</li>
+			<li>Jeśli gracz uzyska sumę punktów powyżej 21, przegrywa zakład.</li>
+			<li>Jeśli komputer przekroczy sumę 21 punktów, przegrywa.</li>
+			<li>Jeśli gracz ma wyższą sumę punktów niż przeciwnik, ale nie przekraczając 21 punktów, wygrywa.</li>
+		</ol>
+	</li>
+	<li>Wygrane:<br>
+		<ol type="a">
+			<li>Jeśli gracz wygra to jego wygrana zapisze się w bazie danych.</li>
+			<li>Jeśli gracz przegra to jego przegrana zapisze się w bazie danych.</li>
+			<li>Jeśli gracz oraz komputer przekroczą sumę 21 - remis.</li>
+		</ol>
+	</li>
+	<li>Koniec gry:<br>
+		<ol type="a">
+			<li>Po każdej rundzie, talia kart jest tasowana i gra rozpoczyna się od nowa.</li>
+			<li>Gracz może opuścić grę w dowolnym momencie.</li>
+		</ol>
+	</li>
+</ol>
+{% endblock %}
