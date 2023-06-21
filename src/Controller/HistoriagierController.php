@@ -51,7 +51,7 @@ class HistoriagierController extends AbstractController
         dump($user->getId());
 
         $dostepdobazy = $this->getDoctrine()->getRepository(User::class)->findBy(['id' => $user]);
-        $dostepdohistrii = $this->getDoctrine()->getRepository(HistoriaGier::class)->findBy(['id' => $user]);
+        $dostepdohistrii = $this->getDoctrine()->getRepository(HistoriaGier::class)->findBy(['User' => $user]);
         
         return $this->render('historiagier/index.html.twig', [
             'controller_name' => 'HistoriagierController',

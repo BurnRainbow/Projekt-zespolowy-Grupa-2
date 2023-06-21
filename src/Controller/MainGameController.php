@@ -7,6 +7,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
+use DateTime;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -51,16 +52,25 @@ class MainGameController extends AbstractController
        * @var User $user
        */
 
-        $rep = $em->getRepository(User::class);
+       $currentDate = new DateTime();
+       $formattedDate = $currentDate->format('Y-m-d H:i:s');
+
+        $rep1 = $em->getRepository(User::class);
+        $rep2 = new HistoriaGier();
 
         $user = $usr;
         dump($user->getId());
 
-        $encja = $rep -> find($user);
-        $encja -> setWygrane($wygrane);
-        $encja -> setPrzegrane($przegrane);
-        $encja -> setRemisy($remis);
+        $rep2 -> setUser($user); 
+        $rep2 -> setWynikGry($Status);
+        $rep2 -> setDataGry($currentDate);
 
+        $encja1 = $rep1 -> find($user);
+        $encja1 -> setWygrane($wygrane);
+        $encja1 -> setPrzegrane($przegrane);
+        $encja1 -> setRemisy($remis);
+
+        $em->persist($rep2);
         $em -> flush();
 
         $dostepdobazy = $this->getDoctrine()->getRepository(User::class)->findBy(['id' => $user]);
@@ -77,3 +87,5 @@ class MainGameController extends AbstractController
         /** SAFEZONE */
     }
 }
+
+

@@ -3,23 +3,52 @@
 {% block title %}Hello HistoriagierController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+<link href="{{ asset('dokumenty.css') }}" rel="stylesheet"/>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/var/www/symfony/src/Controller/HistoriagierController.php'|file_link(0) }}">src/Controller/HistoriagierController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/var/www/symfony/templates/historiagier/index.html.twig'|file_link(0) }}">templates/historiagier/index.html.twig</a></code></li>
-    </ul>
+<h1 id="top">
+Statystyki i Historia gier
+</h1>
+
+
+<div id="statystyki">
+{% for x in bazadanych %}
+<table id="statystykia">
+    <tr>
+        <td>Wygrane : {{x.wygrane}}</td>
+        <td>Przegrane : {{x.przegrane}}</td>
+        <td>Remisy : {{x.remisy}}</td>
+        <td>Łącznie zagranych gier : {{x.wygrane + x.przegrane + x.remisy}}</td>
+        <td>% wygranych : {{(x.wygrane) / (x.wygrane + x.przegrane + x.remisy)}}</td>
+    </tr>
+</table>
+{% endfor %}
 </div>
-<div>
-{% for x in historiagier %}
-    {{x.id}},{{x.user}},{{x.datagry}}<br>
+
+<div class="historiazagranych" id="historiazagranych">
+<table >
+<tr>
+    <td>Nazwa użytkownika</td>
+    <td>Status gry</td>
+    <td>Data Gry</td>
+
+</tr>
+{% for x in bazadanych %}
+    {% for y in historiagier %}
+    <tr>
+        <td>{{x.username}}</td>
+        {% if y.Wynikgry == 1 %}
+        <td>wygrana</td>
+        {% endif %}
+        {% if y.Wynikgry == 2 %}
+        <td>przegrana</td>
+        {% endif %}
+        {% if y.Wynikgry == 3 %}
+        <td>remis</td>
+        {% endif %}
+        <td>{{y.datagry}}</td>
+    </tr>
+    {% endfor %}
 {% endfor %}
 </div>
 {% endblock %}

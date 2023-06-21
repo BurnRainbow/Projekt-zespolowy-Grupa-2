@@ -21,6 +21,9 @@ class HistoriaGier
     #[ORM\JoinColumn(nullable: false)]
     private ?user $User = null;
 
+    #[ORM\Column]
+    private ?int $wynik_gry = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -46,6 +49,18 @@ class HistoriaGier
     public function setUser(?user $User): static
     {
         $this->User = $User;
+
+        return $this;
+    }
+
+    public function getWynikGry(): ?int
+    {
+        return $this->wynik_gry;
+    }
+
+    public function setWynikGry(int $wynik_gry): static
+    {
+        $this->wynik_gry = $wynik_gry;
 
         return $this;
     }
