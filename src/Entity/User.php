@@ -47,13 +47,13 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private ?string $password = null;
 
     #[ORM\Column]
-    private ?int $wygrane = null;
+    private ?int $wygrane = 0;
 
     #[ORM\Column]
-    private ?int $przegrane = null;
+    private ?int $przegrane = 0;
 
     #[ORM\Column]
-    private ?int $remisy = null;
+    private ?int $remisy = 0;
 
     #[ORM\OneToMany(mappedBy: 'User', targetEntity: HistoriaGier::class)]
     private Collection $DoHistoriiGier;
