@@ -36,7 +36,7 @@
                     <a href="{{ path('main_game') }}">
                        <i class="fa fa-gamepad fa-2x"></i>
                         <span class="nav-text">
-			                Powrót do gry
+			                Gra
                         </span>
                     </a>
                 </li>
@@ -58,6 +58,13 @@
                 </li>
 	    </ul>
             <ul class="logout">
+		<li>
+		  <a href="#" style="pointer-events: none; cursor: default;">
+			<i class="fa fa-user fa-2x"></i>
+			<span class="nav-text">
+			Jesteś zalogowany jako:<br>{{app.user.username}}
+			</span>
+		</li>
                 <li>
                    <a href="{{ path('app_logout')}}">
                          <i class="fa fa-power-off fa-2x"></i>
