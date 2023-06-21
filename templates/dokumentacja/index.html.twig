@@ -1,8 +1,15 @@
 {% extends 'base.html.twig' %}
-
 {% block title %}Dokumentacja projektu{% endblock %}
 
 {% block body %}
-	<h1>Dokumentacja z projektu.</h1><br>
-	<a href="/dokumenty/przypadki_uzycia.txt" download>Przypadki użycia</a>
+
+<link href="{{ asset('dokumenty.css') }}" rel="stylesheet"/> 
+
+	<h1 id="top">Dokumentacja projektu</h1>
+	
+	<div style="top:70px;">
+	<a href="przypadki_uzycia.txt" download>Przypadki użycia</a>
+	<p><embed src="przypadki_uzycia.txt" style="width:80%; height:1000px; background-color:White; color:black;"></p>
+	</div>
+
 {% endblock %}

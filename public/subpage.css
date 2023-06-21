@@ -21,10 +21,8 @@
 
 .main-menu {
   background: #212121;
-  border-right: 1px solid #e5e5e5;
-  position: absolute;
+  position: fixed;
   top: 0;
-  bottom: 0;
   height: 100%;
   left: 0;
   width: 60px;
@@ -117,6 +115,8 @@ nav ul, nav li {
   width: 100%;
   height: 100%;
   margin-left: 55px;
+  position: fixed;
+  top: 0px;
 }
 
 @font-face {

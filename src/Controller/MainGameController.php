@@ -44,8 +44,8 @@ class MainGameController extends AbstractController
         
     }
 
-    #[Route('/api/main_game/update/{wygrane}/{przegrane}/{remis}', name: 'main_game_update')]
-    public function update(UserInterface $usr, EntityManagerInterface $em, $wygrane, $przegrane, $remis): Response
+    #[Route('/api/main_game/update/{wygrane}/{przegrane}/{remis}/{Status}', name: 'main_game_update')]
+    public function update(UserInterface $usr, EntityManagerInterface $em, $wygrane, $przegrane, $remis, $Status): Response
     {
         /**
        * @var User $user
