@@ -1,10 +1,12 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-Projekt tworzyli:
-<ul>
-<li>Sebastian Sawicz 13979 </li>
-<li>Gabriel Troć 13963 </li>
-<li>Michał Korniszuk 13926 </li>
-<li>Mateusz Charęża 13944 </li>
-</ul>
+<link href="{{ asset('dokumenty.css') }}" rel="stylesheet"/>
+
+    <h1 id="top">Projekt stworzony przez</h1>
+        <ul class="tworcy">
+        <li>Sebastian Sawicz 13979 </li>
+        <li>Gabriel Troć 13963 </li>
+        <li>Michał Korniszuk 13926 </li>
+        <li>Mateusz Charęża 13944 </li>
+        </ul>
 {% endblock %}

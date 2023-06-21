@@ -33,10 +33,18 @@
                 </li>
             {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                 <li>
+                    <a href="{{ path('main_game') }}">
+                       <i class="fa fa-gamepad fa-2x"></i>
+                        <span class="nav-text">
+			                Powrót do gry
+                        </span>
+                    </a>
+                </li>
+                <li>
                     <a href="{{ path('app_instrukcja') }}">
                        <i class="fa fa-info fa-2x"></i>
                         <span class="nav-text">
-			    Instrukcja gry
+			                Instrukcja gry
                         </span>
                     </a>
                 </li>
@@ -44,7 +52,7 @@
                     <a href="{{ path('app_dokumentacja') }}">
                        <i class="fa fa-folder-open fa-2x"></i>
                         <span class="nav-text">
-			    Dokumentacja
+			                Dokumentacja
                         </span>
                     </a>
                 </li>
@@ -61,5 +69,8 @@
             {% endif %}
             </ul>
         </nav>
+
+
+
     </body>
 </html>

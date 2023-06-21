@@ -13,6 +13,9 @@ body {
 }
 .BlackJack {
   background-color: #33CC99;
+  position: relative;
+  top: -21px;
+  margin-bottom: -21px;
   padding: 25px;
   text-align: center;
   width:100%;

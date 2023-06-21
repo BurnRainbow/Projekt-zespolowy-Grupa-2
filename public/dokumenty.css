@@ -1,12 +1,100 @@
 #top{
 
-height: 60px;
-width: 100%;
-color: #e5e5e5;
-background-color: #212121;
-position: absolute;
-top: 0px;
+    position: relative;
+    height: 60px;
+    width: 100% + 100px;
+    top: -21px;
+    left: -50px;
+    
+    margin-right: -58px;
+    padding-top: 16px;
+    margin-bottom: -21px;
 
-text-align: center;
+    color: #e5e5e5;
+    background-color: #212121;
+    text-align: center;
 
 }
+
+#zawartosc_div{
+
+    text-align: center;
+    
+    background-color: #2b2a2a;
+
+    border-radius: 20px;
+    padding: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+
+}
+
+
+#zawartosc_a{
+    
+    width:100%; 
+    
+    display: block;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    color: #fff;
+    cursor: pointer;
+    font-size: 35px;
+    text-decoration: none;
+}
+
+#zawartosc_emb{
+
+    width:95%; 
+    height:600px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.tworcy li{
+    font-size: 50px;
+
+    background: linear-gradient(
+        to right,
+        #52c0ff 20%,
+        #ff4949 40%,
+        #ebff3c 60%,
+        #44ff4d 80%,
+        #52c0ff 100%
+        
+        
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 500% auto;
+    animation: textShine 5s linear infinite alternate;
+}
+
+@keyframes textShine {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.tworcy {
+    list-style-type: none;
+
+    position: relative;
+    height: 300px;
+    width: 100% + 100px;
+    left: -65px;
+    
+    margin-right: -58px;
+    margin-bottom: -21px;
+
+    padding-top: 100px;
+
+    text-align: center;
+  }

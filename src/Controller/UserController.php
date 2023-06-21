@@ -21,6 +21,7 @@ class UserController extends AbstractController
     #[Route('/logintest', name: 'user_login')]
     public function index(Request $request): Response
     {
+
         $user = new User(); 
         $form = $this->createFormBuilder($user)
             ->add('username', TextType::class, [
