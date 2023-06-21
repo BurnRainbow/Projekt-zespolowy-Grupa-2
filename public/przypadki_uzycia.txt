@@ -1,7 +1,8 @@
 ﻿Wyświetlenie strony
+
 -Użytkownik wpisuje adres strony w pasku URL przeglądarki 
 
--Użytkownik zostaje przekierowany do podstrony odpowiedzialnej za logowanie użytkowników
+-Użytkownik zostaje przekierowany do strony głównej
 
 -Użytkownik może wpisać dane do logowania albo przejść na stronę odpowiedzialna za rejestrację nowych użytkowników
 
@@ -22,22 +23,19 @@ Rejestracja nowego użytkownika
 
 -System weryfikuje czy podane dane zgadzają się z danymi zawartymi w bazie danych użytkowników
 
-- Jeśli dane zgadzają się   użytkownik zostaję przekierowany na stronę główną
+-Jeśli dane zgadzają się użytkownik zostaję przekierowany na stronę z grą
 
-- Jeśli dane nie zgadzają się system informuje użytkownika o błędzie oraz prosi o ponowne wpisanie e-mailu oraz hasła
+-Jeśli dane nie zgadzają się system informuje użytkownika o błędzie oraz prosi o ponowne wpisanie e-mailu oraz hasła
+
 
 
 Gra
 
 -Użytkownik loguje się na stronie
 
--Użytkownik wybiera grę na stronie i jest przekierowany na podstronę z grą
+-Użytkownik zostaje przekierowany na stronę z grą
 
 -Użytkownik rozpoczyna grę wybierając przycisk "Rozpocznij grę"
-
--System pyta się o stawkę, o jaką użytkownik chce zagrać. Użytkownik widzi swój stan konta i wybiera stawkę
-
--System rozdaje 2 karty graczowi
 
 -System prosi użytkownika o reakcję - dobrać kartę, zostać przy nich, lub podwoić stawkę. Użytkownik wybiera jeden z 3 przycisków
 
@@ -49,7 +47,8 @@ Gra
    2. Przy przegranej system zabiera postawioną stawkę ze stanu konta gracza
    3. Przy remisie system zwraca użytkownikowi postawioną sumę
 
--System zapisuje wynik rozgrywki w bazie danych i wyświetla przycisk do powrotu do menu głównego, lub ponownej rozgrywki
+-System zapisuje wynik rozgrywki w bazie danych 
+
 
 
 Sprawdzenie statystyk gracza
@@ -58,12 +57,8 @@ Sprawdzenie statystyk gracza
 
 -Użytkownik loguje się w serwisie
 
--Użytkownik wybiera opcje swoje konto  stronie głównej
+-Użytkownik wybiera opcje historia gier z menu bocznego
             
--Użytkownik zostaję przekierowany na podstronę do zarządzania kontem 
+-Użytkownik zostaję przekierowany na podstronę historii gier 
 
--Użytkownik wybiera opcje statystyki konta
-
--Użytkownik zostaje przekierowany na podstronę ze statystkami konta
-
--Podstrona zawiera informacje o ilości rozegranych gier, % wygranych do ilości gier, ilości przegranych i wygranych gier,bilans konta .
+-Podstrona zawiera informacje o ilości rozegranych gier, wygranych gier, przegranych gier, remisów, wynik gry i datę gry

@@ -1,3 +1,8 @@
+.area {
+
+    height: 100%;
+}
+
 #top{
 
     position: relative;
@@ -10,7 +15,8 @@
     padding-top: 16px;
     margin-bottom: -21px;
 
-    color: #e5e5e5;
+    
+    color: #999;
     background-color: #212121;
     text-align: center;
 
@@ -55,15 +61,15 @@
 }
 
 .tworcy li{
+
     font-size: 50px;
 
     background: linear-gradient(
         to right,
         #52c0ff 20%,
         #ff4949 40%,
-        #ebff3c 60%,
-        #44ff4d 80%,
-        #52c0ff 100%
+        #44ff4d 60%,
+        #52c0ff 80%
         
         
     );
@@ -72,6 +78,7 @@
     -webkit-text-fill-color: transparent;
     background-size: 500% auto;
     animation: textShine 5s linear infinite alternate;
+
 }
 
 @keyframes textShine {
@@ -84,6 +91,7 @@
 }
 
 .tworcy {
+
     list-style-type: none;
 
     position: relative;
@@ -97,4 +105,34 @@
     padding-top: 100px;
 
     text-align: center;
+
   }
+
+p{
+
+    position: relative;
+    margin-top: -12px;
+
+    color: #a0a0a0 !important;
+    font-size:25px;
+    
+}
+
+body{
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("https://wallpapers.com/images/hd/casino-background-67ppr1q6d49pwpaz.jpg");
+    background-size: 100vw 100vh;
+
+}
+
+.jakgrac {
+
+    padding-top:35px;
+    position: relative;
+    margin-top: -12px;
+    list-style-type: none;
+    color: #ffffff !important;
+    font-size:25px;
+    word-wrap: normal;
+
+}

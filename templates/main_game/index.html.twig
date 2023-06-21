@@ -113,15 +113,18 @@ function ZnajdzZwyciezce(){
 function ZmienWynik(Wygrany){
     if(Wygrany == Gracz){
         document.querySelector('#ZakonczenieGry').textContent = 'Gracz wygrał!';
-        document.querySelector('#ZakonczenieGry').style.color = 'green';
+        document.querySelector('#ZakonczenieGry').style.color = 'rgb(0,255,0)';
+        document.querySelector('#ZakonczenieGry').style.padding = '5';
     }
     else if(Wygrany == Si){
         document.querySelector('#ZakonczenieGry').textContent = "Gracz przegrał!";
         document.querySelector('#ZakonczenieGry').style.color = 'red';
+        document.querySelector('#ZakonczenieGry').style.padding = '5';
     }
     else{
         document.querySelector('#ZakonczenieGry').textContent = 'Remis!';
         document.querySelector('#ZakonczenieGry').style.color = 'orange';
+        document.querySelector('#ZakonczenieGry').style.padding = '5';
     }
 
 }
