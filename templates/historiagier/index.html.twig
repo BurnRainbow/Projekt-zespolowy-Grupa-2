@@ -19,7 +19,11 @@ Statystyki i Historia gier
         <td>Przegrane : {{x.przegrane}}</td>
         <td>Remisy : {{x.remisy}}</td>
         <td>Łącznie zagranych gier : {{x.wygrane + x.przegrane + x.remisy}}</td>
-        <td>% wygranych : {{(x.wygrane) / (x.wygrane + x.przegrane + x.remisy)}}</td>
+        <td>% wygranych : {% if x.wygrane == 0 %}
+            0
+        {% else %}
+            {{ (x.wygrane) / (x.wygrane + x.przegrane + x.remisy) * 100 }}%
+        {% endif %}</td>
     </tr>
 </table>
 {% endfor %}
