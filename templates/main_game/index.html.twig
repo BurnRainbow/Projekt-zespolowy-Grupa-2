@@ -153,13 +153,15 @@ function Zostan(){
             TablicaWynikow();
 
         var doc = document.getElementById('update');
+
+        doc.setAttribute("href","{{path('main_game_update',{'wygrane':'Wygrana','przegrane':'Przegrana','remis':'Remis'})}}");
+
         var href = doc.getAttribute('href');
         href = href.replace('Wygrana',Gra['Wygrana']);
         href = href.replace('Przegrana',Gra['Przegrana']);
         href = href.replace('Remis',Gra['Remis']);
 
         doc.setAttribute('href',href);
-
     }
 }
 
@@ -227,7 +229,7 @@ function Rozdaj(){
                     <div>
                         <button class="button" onclick="Dobierz()"> Dobierz</button> 
                         <button class="button" onclick="Zostan()"> Zostan </button>
-                        <a class="button" id="update" href="{{path('main_game_update',{'wygrane':'Wygrana','przegrane':'Przegrana','remis':'Remis'})}}"> Rozdaj </a>
+                        <a class="button" id="update" href="#"> Rozdaj </a>    
                     </div>
 
                 <div>
