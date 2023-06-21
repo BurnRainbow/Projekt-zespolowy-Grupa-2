@@ -24,6 +24,14 @@
                         </span>
                     </a>
                 </li>
+		<li>
+		    <a href="/o-nas">
+			<i class="fa fa-circle-info fa-2x"></i>
+                        <span class="nav-text">O nas
+                        </span>
+                    </a>
+                </li>
+            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                 <li>
                     <a href="{{ path('app_instrukcja') }}">
                        <i class="fa fa-info fa-2x"></i>
@@ -36,13 +44,12 @@
                     <a href="{{ path('app_dokumentacja') }}">
                        <i class="fa fa-folder-open fa-2x"></i>
                         <span class="nav-text">
-			    Instrukcja gry
+			    Dokumentacja
                         </span>
                     </a>
                 </li>
 	    </ul>
             <ul class="logout">
-            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                 <li>
                    <a href="{{ path('app_logout')}}">
                          <i class="fa fa-power-off fa-2x"></i>
