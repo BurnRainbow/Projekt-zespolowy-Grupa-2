@@ -22,7 +22,7 @@ Statystyki i Historia gier
         <td>% wygranych : {% if x.wygrane == 0 %}
             0
         {% else %}
-            {{ (x.wygrane) / (x.wygrane + x.przegrane + x.remisy) * 100 }}%
+            {{((x.wygrane) / (x.wygrane + x.przegrane + x.remisy) * 100)|number_format(2) }}%
         {% endif %}</td>
     </tr>
 </table>
