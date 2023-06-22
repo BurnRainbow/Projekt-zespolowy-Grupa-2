@@ -1,4 +1,4 @@
-*****DOKUMENTY***** \n
+*****DOKUMENTY***** <br>
 **Opis projektu**
 Celem tego projektu jest stworzenie internetowej strony z grą Blackjack, w której użytkownik będzie mógł grać przeciwko komputerowi. 
 Gra zostanie zaimplementowana w języku JavaScript i Symfony oraz udostępniona na stronie internetowej. 
